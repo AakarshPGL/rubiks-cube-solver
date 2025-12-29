@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RUBIK'S CUBE SOLVER</h1>
+        <p class="subtitle">Upload all 6 Faces and Get Step-By-Step Solution</p>
+    <div class="uploads">
+
+        <label>Front Face Image: <input type="file" id="Front">
+            <span class="status" id="Front-status">Not uploaded</span>
+        </label>
+        <label>Right Face Image: <input type="file" id="Right">
+            <span class="status" id="Right-status">Not uploaded</span>
+        </label>
+        <label>Back Face Image: <input type="file" id="Back">
+            <span class="status" id="Back-status">Not uploaded</span>
+        </label>
+        <label>Left Face Image: <input type="file" id="Left">
+            <span class="status" id="Left-status">Not uploaded</span>
+        </label>
+        <label>Top Face Image: <input type="file" id="Up">
+            <span class="status" id="Up-status">Not uploaded</span>
+        </label>
+        <label>Bottom Face Image: <input type="file" id="Down">
+            <span class="status" id="Down-status">Not uploaded</span>
+        </label>
+
+    </div>
+   
+    <button id="solveBtn">Solve Cube</button>
+    <p id="error-msg"></p>
+    <h2>solution steps:</h2>
+    <ul id="solution"></ul>
+    </div>
+    
+
+<script src="app.js"></script>
+</body>
+</html>

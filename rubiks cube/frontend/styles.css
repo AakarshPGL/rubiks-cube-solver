@@ -1,0 +1,84 @@
+body{
+    font-family: Arial,sans-serif;
+    background-color: #f4f6f8;
+    margin:0;
+    padding:0;
+}
+.container{
+    max-width: 1000px;
+    margin: 50px auto; /*check auto*/
+    background-color: white;
+     padding:30px;
+     border-radius: 8px;
+     box-shadow:0 0 10px rgba(0,0,0,0.1);
+     text-align:center;
+}
+button{
+        padding:12px 30px;
+        font-size:17px;
+        cursor:pointer;
+        border:none;
+        background-color: linear-gradient(135deg,#4caf50,#43a047);
+        color:rgb(13, 17, 13);
+        border-radius: 30px;
+        margin-top:20px;
+        transition:transform 0.2 ease,box-shadow 0.2s ease; 
+}
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+
+}
+
+ul {
+    text-align: left;
+    margin-top: 20px;
+
+}
+li {
+    margin-bottom: 10px;
+}
+.uploads{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* gap: 12px; */
+    column-gap: 30px;
+    margin:20px 0;
+    row-gap: 28px;
+}
+
+.uploads label{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+
+    padding: 15px;
+    border:1px dashed #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+
+    font-weight:500;
+    font-size: 15px;
+    transition:all 0.3s ease;
+}
+.uploads label:hover{
+    border-color: #4caf50;
+    background-color: #f1fff3;
+}
+.status{
+    font-size: 13px;
+    color:#888;
+}
+.status.uploaded{
+    color:green;
+    font-weight: 600;
+}
+#error-msg{
+    color:red;
+    margin-top:10px;
+}
+.subtitle{
+    color:#666;
+    margin-bottom: 25px;
+    font-size:25px;
+}
