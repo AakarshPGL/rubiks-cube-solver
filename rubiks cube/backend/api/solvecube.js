@@ -5,12 +5,20 @@ import {imageToCube} from "../logic/imageToCube.js";
 import { isValidCubeString } from "../logic/isValidCube.js";
 
 
-export  function solveCubeAPI(req,res){
-    
+export  async function solveCubeAPI(req,res){
+
     const images=req.files;
 
-    const cubeData = imageToCube(images);
-    
+    let cubeData;
+    try{
+        cubeData = await imageToCube(images);
+    }catch(err){
+        res.json({
+            error: err.message || "Could not read the cube from the uploaded images. Please upload clear images."
+        });
+        return;
+    }
+
     if(!isValidCubeString(cubeData)){
         res.json({
             error:"Invalid cube configuration.Please upload clear images."
@@ -28,4 +36,3 @@ export  function solveCubeAPI(req,res){
     })
    
 }
-
